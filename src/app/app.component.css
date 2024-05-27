@@ -1,45 +1,48 @@
-/* src/app/app.component.css */
 .header {
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 20px;
-    background: linear-gradient(180deg, rgba(255,71,71,1) 0%, rgba(0,0,0,1) 100%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+  background: linear-gradient(180deg, rgba(255,71,71,1) 0%, rgba(0,0,0,1) 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  text-align: center; /* Centrer le contenu horizontalement */
+}
 
-  }
-  
-  h1 {
-      color: #fff;
-      text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 40px #00ffea, 0 0 80px #00ffea;
-      animation: neon-glow 1.5s infinite alternate;
-  }
-  
-  h2 {
-    color:black;
-    text-shadow: 0px 0px 5px rgb(255, 255, 255);
-  }
-  
+.header h1 {
+  color: #fff;
+  text-shadow: 0 0 20px #00ffea, 0 0 10px #3c8d86, 0 0 20px #00ffea, 0 0 100px #91ff00, 0 0 80px #00ffea;
+  animation: neon-glow 1.5s infinite alternate;
+}
 
-  p {
-    color: #ff9696;
-  }
-  
+.header h2 {
+  color:black;
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
 
-  .content-block {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+.header p {
+  color: #ff9696;
+}
+
+.content-block{
+  background-color: #91ff00;
+  border-radius: 15px;
+  margin:5px;
+  padding: 5px;
+}
+
+
+/* Media query pour les écrans de petite taille (mobiles) */
+@media screen and (max-width: 600px) {
+  .header h1 {
+      font-size: 24px; /* Taille de police plus petite pour les mobiles */
   }
-  
-  .content-block h2 {
-    color: #444;
+
+  .header h2 {
+      font-size: 18px; /* Taille de police plus petite pour les mobiles */
   }
-  
-  .content-block p {
-    color: #555;
+
+  .header p {
+      font-size: 14px; /* Taille de police plus petite pour les mobiles */
   }
+}

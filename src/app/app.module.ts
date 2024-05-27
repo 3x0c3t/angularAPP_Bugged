@@ -3,14 +3,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router'; // Importez RouterModule depuis @angular/router
+import { AppRoutingModule } from './app-routing.module'; // Importez AppRoutingModule depuis le fichier approprié
 
+// LIENS VERS LES PAGES
 import { AppComponent } from './app.component';
 import { LinksPageComponent } from './links-page/links-page.component';
 import { Blocs4Component } from './blocs4/blocs4.component';
 import { MonComposantComponent } from './mon-composant/mon-composant.component';
 import { ContactCardComponent } from './contact-card/contact-card.component';
-import { AppRoutingModule } from './app-routing.module'; // Assurez-vous que ce fichier existe
+import { CatalogComponent } from './catalog/catalog.component'; // CATALOGUE
 
 @NgModule({
   declarations: [
@@ -18,13 +19,13 @@ import { AppRoutingModule } from './app-routing.module'; // Assurez-vous que ce 
     LinksPageComponent,
     Blocs4Component,
     MonComposantComponent,
-    ContactCardComponent
+    ContactCardComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule, // Importez RouterModule ici
-    AppRoutingModule // Assurez-vous que ce fichier existe
+    AppRoutingModule // Ajoutez AppRoutingModule ici pour utiliser les routes définies dans ce module
   ],
   providers: [],
   bootstrap: [AppComponent]
