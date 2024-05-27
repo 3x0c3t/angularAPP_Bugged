@@ -7,17 +7,17 @@
   }
   
   .bloc {
-      height: 45px;
-      width: 45px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-  
-      background-color: aqua;
-      border: 3px solid black;
-      border-radius: 15px;
-      position: absolute; /* Nécessaire pour positionner les blocs */
+    position: absolute; /* Nécessaire pour positionner les blocs */
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, rgba(218,224,225,1) 0%, rgba(255,255,255,1) 50%, rgba(218,224,225,1) 100%);
+    border: 3px solid rgb(66, 66, 66);
+    border-radius: 15px;
+
   }
   
   .top-left {

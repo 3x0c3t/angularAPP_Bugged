@@ -1,21 +1,30 @@
 // src/app/app.module.ts
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router'; // Importez RouterModule depuis @angular/router
 
 import { AppComponent } from './app.component';
-import { LinksPageComponent } from './links-page/links-page.component'; // Importer le composant
-import { appRoutes } from './app.routes';
+import { LinksPageComponent } from './links-page/links-page.component';
+import { Blocs4Component } from './blocs4/blocs4.component';
+import { MonComposantComponent } from './mon-composant/mon-composant.component';
+import { ContactCardComponent } from './contact-card/contact-card.component';
+import { AppRoutingModule } from './app-routing.module'; // Assurez-vous que ce fichier existe
 
 @NgModule({
   declarations: [
     AppComponent,
-    // Ne pas déclarer LinksPageComponent ici si c'est un composant autonome
+    LinksPageComponent,
+    Blocs4Component,
+    MonComposantComponent,
+    ContactCardComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    LinksPageComponent // Importer le composant autonome ici
+    FormsModule,
+    RouterModule, // Importez RouterModule ici
+    AppRoutingModule // Assurez-vous que ce fichier existe
   ],
   providers: [],
   bootstrap: [AppComponent]

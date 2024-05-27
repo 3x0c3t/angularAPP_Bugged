@@ -1,19 +1,16 @@
 // src/main.ts
 
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
-import { AppModule } from './app/app.module';
-
+import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+import '@angular/compiler'; // Assurez-vous que le compilateur est correctement chargé
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// Vérifiez si vous êtes en mode production (à remplacer par votre propre mécanisme)
+const isProduction = true;
 
-  platformBrowserDynamic().bootstrapModule(AppModule)
+if (isProduction) {
+  enableProdMode(); // Activer le mode production
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
-
-
-
-
-

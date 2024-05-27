@@ -1,0 +1,38 @@
+/* src/app/contact-card/contact-card.component.css */
+
+.contact-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    background: linear-gradient(180deg, rgba(59,11,11,1) 0%, rgba(255,99,99,1) 100%);
+  }
+  
+  .contact-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .contact-card h2 {
+    margin: 16px 0 8px;
+  }
+  
+  .contact-card p {
+    margin: 8px 0;
+  }
+  
+  .contact-card input {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    width: 95%;
+    padding: 8px;
+    margin-top: 8px;
+    margin: 0 auto; /* Centre horizontalement */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

@@ -1,0 +1,12 @@
+<!-- src/app/contact-card/contact-card.component.html -->
+
+<div class="contact-card">
+    <img [src]="user.photo" alt="{{user.firstName}} {{user.name}}">
+    <h2>{{user.firstName}} {{user.name}}</h2>
+    <p>Age: {{user.age}}</p>
+    <p>Citation: "{{user.quote}}"</p>
+    
+    <label for="quote">Update Quote:</label>
+    <input id="quote" type="text" [(ngModel)]="user.quote">
+  </div>
+  
