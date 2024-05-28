@@ -1,0 +1,51 @@
+<!-- sign-up.component.html -->
+
+
+<!-- sign-up.component.html -->
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="newUser.email" required email #email="ngModel">
+    <div *ngIf="myForm.submitted && email.errors?.['required'] && (email.dirty || email.touched)">
+      <div>L'email est requis</div>
+    </div>
+    <div *ngIf="myForm.submitted && email.errors?.['email'] && (email.dirty || email.touched)">
+      <div>L'email est invalide</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <label for="firstname">Prénom</label>
+    <input type="text" id="firstname" name="firstname" [(ngModel)]="newUser.firstname" required minlength="3" maxlength="15" #firstname="ngModel">
+    <div *ngIf="myForm.submitted && firstname.errors?.['required'] && (firstname.dirty || firstname.touched)">
+      <div>Le prénom est requis</div>
+    </div>
+    <div *ngIf="myForm.submitted && firstname.errors?.['minlength'] && (firstname.dirty || firstname.touched)">
+      <div>Le prénom doit comporter au moins 3 caractères</div>
+    </div>
+    <div *ngIf="myForm.submitted && firstname.errors?.['maxlength'] && (firstname.dirty || firstname.touched)">
+      <div>Le prénom ne doit pas dépasser 15 caractères</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <label for="lastname">Nom</label>
+    <input type="text" id="lastname" name="lastname" [(ngModel)]="newUser.lastname" required minlength="3" maxlength="15" #lastname="ngModel">
+    <div *ngIf="myForm.submitted && lastname.errors?.['required'] && (lastname.dirty || lastname.touched)">
+      <div>Le nom est requis</div>
+    </div>
+    <div *ngIf="myForm.submitted && lastname.errors?.['minlength'] && (lastname.dirty || lastname.touched)">
+      <div>Le nom doit comporter au moins 3 caractères</div>
+    </div>
+    <div *ngIf="myForm.submitted && lastname.errors?.['maxlength'] && (lastname.dirty || lastname.touched)">
+      <div>Le nom ne doit pas dépasser 15 caractères</div>
+    </div>
+  </fieldset>
+
+  <!-- Autres champs et bouton de soumission -->
+  <div>
+    <button type="submit">Envoyer</button>
+    <button type="button" (click)="resetForm()">Réinitialiser</button>
+  </div>
+</form>

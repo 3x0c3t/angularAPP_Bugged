@@ -29,9 +29,10 @@ export class CatalogComponent implements OnInit {
   otherProducts: Product[] = [];
 
   ngOnInit(): void {
-    this.productsToDefine = this.products.filter(product => product.price === undefined || isNaN(product.price));
-    this.productsOnPromo = this.products.filter(product => product.promo === true && product.price !== undefined);
+    this.productsToDefine = this.products.filter(product => typeof product.price === 'undefined' || isNaN(product.price));
+    this.productsOnPromo = this.products.filter(product => product.promo === true && typeof product.price !== 'undefined');
     this.otherProducts = this.products.filter(product => 
-      product.price !== undefined && !product.promo && !isNaN(product.price));
+      typeof product.price !== 'undefined' && !product.promo && !isNaN(product.price));
   }
+  
 }

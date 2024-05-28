@@ -1,5 +1,3 @@
-// src/app/app.module.ts
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -12,6 +10,8 @@ import { Blocs4Component } from './blocs4/blocs4.component';
 import { MonComposantComponent } from './mon-composant/mon-composant.component';
 import { ContactCardComponent } from './contact-card/contact-card.component';
 import { CatalogComponent } from './catalog/catalog.component'; // CATALOGUE
+import { MyFormComponent } from './my-form/my-form.component'; // Importez MyFormComponent depuis le bon chemin
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,9 @@ import { CatalogComponent } from './catalog/catalog.component'; // CATALOGUE
     Blocs4Component,
     MonComposantComponent,
     ContactCardComponent,
-    CatalogComponent
+    CatalogComponent,
+    MyFormComponent, // Ajoutez une virgule ici
+    SignUpComponent // Ajoutez SignUpComponent ici
   ],
   imports: [
     BrowserModule,

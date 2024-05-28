@@ -1,0 +1,30 @@
+<!-- my-form.component.html -->
+
+<form (ngSubmit)="onSubmit(orderForm)" #orderForm="ngForm">
+  <fieldset>
+    <label for="title">Titre</label>
+    <input type="text" id="title" name="title" [(ngModel)]="order.title" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="quantity">Quantité</label>
+    <input type="number" id="quantity" name="quantity" [(ngModel)]="order.quantity" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="date">Date de commande</label>
+    <input type="date" id="date" name="date" [(ngModel)]="order.date" required>
+  </fieldset>
+
+  <fieldset>
+    <label for="contact">Contact</label>
+    <input type="email" id="contact" name="contact" [(ngModel)]="order.contact" required>
+  </fieldset>
+
+  <!-- Bouton de soumission -->
+  <button type="submit">Soumettre</button>
+
+  <!-- Bouton de réinitialisation -->
+  <button type="button" (click)="resetForm(orderForm)">Réinitialiser</button>
+</form>
+
