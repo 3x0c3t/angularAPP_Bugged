@@ -13,6 +13,6 @@ export class ContactCardComponent {
     firstName: 'John',
     age: 25,
     quote: '',
-    photo: 'https://randomuser.me/api/portraits/lego/2.jpg'
+    photo: 'https://randomuser.me/api/portraits/lego/3.jpg'
   };
 }

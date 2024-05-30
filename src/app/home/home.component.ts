@@ -1,12 +1,12 @@
+// home.component.ts //
+
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'] // Utilisez 'styleUrls' au lieu de 'styleUrl'
 })
 export class HomeComponent {
-
+  // Le contenu de la classe du composant peut être laissé vide pour le moment
 }

@@ -1,4 +1,4 @@
-// src/app/app-routing.module.ts
+// app-routing.module.ts //
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,8 +8,8 @@ import { Blocs4Component } from './blocs4/blocs4.component';
 import { MonComposantComponent } from './mon-composant/mon-composant.component';
 import { ContactCardComponent } from './contact-card/contact-card.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import { MyFormComponent } from './my-form/my-form.component';
-import { SignUpComponent } from './sign-up/sign-up.component'; // Correction de l'importation
+import { FormulaireReactifComponent } from './formulaire-reactif/formulaire-reactif.component'; // Chemin correct pour le composant
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,8 +18,8 @@ const routes: Routes = [
   { path: 'blocs4', component: Blocs4Component },
   { path: 'mon-composant', component: MonComposantComponent },
   { path: 'contact-card', component: ContactCardComponent },
-  { path: 'my-form', component: MyFormComponent },
-  { path: 'sign-up', component: SignUpComponent }, // Correction du nom du chemin
+  { path: 'formulaire-reactif', component: FormulaireReactifComponent }, // Utiliser le nom correct du composant
+  { path: 'sign-up', component: SignUpComponent },
   { path: '**', redirectTo: '' }
 ];
 
@@ -27,4 +27,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor() {
+    console.log('AppRoutingModule constructor called');
+  }
+}

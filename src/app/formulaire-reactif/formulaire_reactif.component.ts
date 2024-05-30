@@ -1,27 +1,24 @@
-// my-form.component.ts
+// formulaire_reactif.component.ts //
 
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-my-form',
-  templateUrl: './my-form.component.html',
-  styleUrls: ['./my-form.component.css']
+  selector: 'app-formulaire-reactif',
+  templateUrl: './formulaire-reactif.component.html',
+  styleUrls: ['./formulaire-reactif.component.css']
 })
-export class MyFormComponent {
+export class FormulaireReactifComponent {
   order: any = {};
 
   onSubmit(form: NgForm): void {
-    // Formulaire soumis
     console.log('Formulaire envoyé !');
     console.log('Formulaire soumis avec les données :', this.order);
-    
-    // Réinitialiser le formulaire
     this.resetForm(form);
   }
 
   resetForm(form: NgForm): void {
     form.resetForm();
-    this.order = {}; // Réinitialiser également l'objet order
+    this.order = {};
   }
 }
